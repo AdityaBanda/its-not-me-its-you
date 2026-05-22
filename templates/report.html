@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="supported-color-schemes" content="dark" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>it's_not_me_its_you — {{TITLE}}</title>
+  </head>
+  <body style="margin:0;padding:0;background:#0a0a0f;color:#e8e8ee;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#0a0a0f;">
+      <tr>
+        <td align="center" style="padding:32px 16px;">
+          <table role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" style="max-width:640px;width:100%;">
+
+            <!-- HERO -->
+            <tr><td style="padding:0 0 24px 0;">
+              <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#888;margin-bottom:8px;">it's_not_me_its_you</div>
+              <div style="font-size:34px;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:#fff;">
+                {{TITLE}}
+              </div>
+              <div style="margin-top:14px;padding:14px 18px;border:1px solid #2a2a36;border-radius:12px;background:linear-gradient(135deg,#1a1530 0%,#0f0a1a 100%);font-size:16px;line-height:1.5;color:#e8e8ee;font-style:italic;">
+                <span style="color:#a78bfa;font-weight:700;">Verdict:</span> {{ONE_LINER}}
+              </div>
+            </td></tr>
+
+            <!-- META BAR -->
+            <tr><td style="padding:0 0 24px 0;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="25%" style="padding:14px;background:#13131c;border-radius:10px 0 0 10px;border:1px solid #1f1f2c;border-right:none;">
+                    <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1.5px;">Messages</div>
+                    <div style="font-size:22px;font-weight:800;color:#fff;margin-top:4px;">{{TOTAL_MESSAGES}}</div>
+                  </td>
+                  <td width="25%" style="padding:14px;background:#13131c;border-top:1px solid #1f1f2c;border-bottom:1px solid #1f1f2c;">
+                    <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1.5px;">Days</div>
+                    <div style="font-size:22px;font-weight:800;color:#fff;margin-top:4px;">{{DAYS_SPAN}}</div>
+                  </td>
+                  <td width="25%" style="padding:14px;background:#13131c;border-top:1px solid #1f1f2c;border-bottom:1px solid #1f1f2c;">
+                    <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1.5px;">Msgs / day</div>
+                    <div style="font-size:22px;font-weight:800;color:#fff;margin-top:4px;">{{MSGS_PER_DAY}}</div>
+                  </td>
+                  <td width="25%" style="padding:14px;background:#13131c;border-radius:0 10px 10px 0;border:1px solid #1f1f2c;border-left:none;">
+                    <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1.5px;">Words</div>
+                    <div style="font-size:22px;font-weight:800;color:#fff;margin-top:4px;">{{TOTAL_WORDS}}</div>
+                  </td>
+                </tr>
+              </table>
+              <div style="margin-top:8px;font-size:11px;color:#666;letter-spacing:0.5px;">
+                {{LANGUAGE_NOTE}}
+              </div>
+            </td></tr>
+
+            <!-- PARTICIPANT CARDS -->
+            <tr><td style="padding:0 0 24px 0;">
+              {{PARTICIPANT_CARDS}}
+            </td></tr>
+
+            <!-- GREEN ZONE -->
+            <tr><td style="padding:0 0 18px 0;">
+              <div style="background:linear-gradient(135deg,#0d2818 0%,#0a1a10 100%);border:1px solid #1f5a36;border-radius:14px;padding:22px;">
+                <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#4ade80;font-weight:700;">🟢 Green Zone</div>
+                <div style="font-size:22px;font-weight:800;color:#fff;margin:6px 0 14px 0;">When it's all going right</div>
+                {{GREEN_ZONE_BODY}}
+              </div>
+            </td></tr>
+
+            <!-- RED ZONE -->
+            <tr><td style="padding:0 0 18px 0;">
+              <div style="background:linear-gradient(135deg,#2a0d10 0%,#1a0a0c 100%);border:1px solid #5a1f24;border-radius:14px;padding:22px;">
+                <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#f87171;font-weight:700;">🔴 Red Zone</div>
+                <div style="font-size:22px;font-weight:800;color:#fff;margin:6px 0 14px 0;">Where it goes sideways</div>
+                {{RED_ZONE_BODY}}
+              </div>
+            </td></tr>
+
+            <!-- FUNNY STATS -->
+            <tr><td style="padding:0 0 18px 0;">
+              <div style="background:#13131c;border:1px solid #1f1f2c;border-radius:14px;padding:22px;">
+                <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#fbbf24;font-weight:700;">😂 Funny Stats</div>
+                <div style="font-size:22px;font-weight:800;color:#fff;margin:6px 0 14px 0;">The receipts (you didn't ask for)</div>
+                {{FUNNY_STATS_BODY}}
+              </div>
+            </td></tr>
+
+            <!-- CHARTS -->
+            <tr><td style="padding:0 0 18px 0;">
+              <div style="background:#13131c;border:1px solid #1f1f2c;border-radius:14px;padding:22px;">
+                <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#a78bfa;font-weight:700;">📊 Patterns</div>
+                <div style="font-size:22px;font-weight:800;color:#fff;margin:6px 0 18px 0;">Your chat in shapes</div>
+
+                <div style="font-size:13px;color:#aaa;margin:0 0 6px 0;text-transform:uppercase;letter-spacing:1px;">By hour of day</div>
+                {{HOURLY_CHART}}
+
+                <div style="font-size:13px;color:#aaa;margin:18px 0 6px 0;text-transform:uppercase;letter-spacing:1px;">By day of week</div>
+                {{WEEKDAY_CHART}}
+
+                <div style="font-size:13px;color:#aaa;margin:18px 0 6px 0;text-transform:uppercase;letter-spacing:1px;">Message volume over time</div>
+                {{TIMELINE_CHART}}
+              </div>
+            </td></tr>
+
+            <!-- AI NARRATIVE -->
+            <tr><td style="padding:0 0 24px 0;">
+              <div style="background:linear-gradient(135deg,#1a1530 0%,#0f0a1a 100%);border:1px solid #3a2a55;border-radius:14px;padding:26px;">
+                <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#a78bfa;font-weight:700;">🤖 The Diagnosis</div>
+                <div style="font-size:22px;font-weight:800;color:#fff;margin:6px 0 14px 0;">A friend, with notes</div>
+                <div style="font-size:16px;line-height:1.7;color:#d8d8e0;">{{AI_NARRATIVE}}</div>
+              </div>
+            </td></tr>
+
+            <!-- FOOTER -->
+            <tr><td style="padding:24px 0 8px 0;text-align:center;">
+              <div style="font-size:11px;color:#555;letter-spacing:1.5px;text-transform:uppercase;">
+                Generated by it's_not_me_its_you · {{GENERATED_AT}}
+              </div>
+              <div style="font-size:11px;color:#444;margin-top:6px;">
+                Your chats never left your machine. Stats only.
+              </div>
+            </td></tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
