@@ -1,4 +1,9 @@
 import puppeteer from 'puppeteer';
+import fs from 'fs';
+import { execFile } from 'child_process';
+import { promisify } from 'util';
+
+const execFileAsync = promisify(execFile);
 
 // Renders the report HTML to a PDF file via headless Chromium.
 // We use a slightly larger viewport so the 640px-wide email layout sits
@@ -33,5 +38,36 @@ export async function htmlToPdf({ html, outputPath }) {
   } finally {
     await browser.close();
   }
+
+  // macOS Preview will flag a PDF as "Locked" if the file carries the
+  // user-immutable flag or has the com.apple.quarantine xattr — both can
+  // sneak in when the file is written by a sandboxed/headless process.
+  // Make sure the PDF is plain, writable, and unflagged so the user can
+  // save / Save-As / edit it like any normal file.
+  await unlockFile(outputPath);
+
   return outputPath;
+}
+
+async function unlockFile(filePath) {
+  try {
+    fs.chmodSync(filePath, 0o644);
+  } catch {
+    // best-effort
+  }
+  if (process.platform !== 'darwin') return;
+
+  // Clear all extended attributes (quarantine, FinderInfo, etc.).
+  try {
+    await execFileAsync('xattr', ['-c', filePath]);
+  } catch {
+    // xattr may not exist on minimal systems; ignore.
+  }
+  // Clear user-immutable / system-immutable flags that show up as the
+  // padlock badge in Finder and trigger Preview's "locked" banner.
+  try {
+    await execFileAsync('chflags', ['nouchg,noschg', filePath]);
+  } catch {
+    // best-effort
+  }
 }
